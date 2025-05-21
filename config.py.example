@@ -1,0 +1,30 @@
+# Telegram Bot Configuration
+TELEGRAM_BOT_TOKEN = "YOUR_ACTUAL_TELEGRAM_BOT_TOKEN"  # Replace with your bot token
+TELEGRAM_CHAT_ID = "YOUR_ACTUAL_TELEGRAM_CHAT_ID"    # Replace with your chat ID (can be a user ID or group ID)
+
+# Products to Track
+# Each product is a dictionary with:
+# - name: The search query for the product (e.g., "iphone 15 pro")
+# - platform: The platform to search on (currently only "olx" is supported)
+# - target_price: The maximum price you're willing to pay. A notification will be sent if a listing is found at or below this price.
+# - min_price: (Optional) The minimum price to consider, to filter out irrelevant listings (e.g. accessories). Default 0.
+PRODUCTS_TO_TRACK = [
+    {
+        "name": "shearwater peregrine",
+        "platform": "olx",
+        "target_price": 1800.00,
+        "min_price": 1000.00 
+    },
+    {
+        "name": "gopro hero 12",
+        "platform": "olx",
+        "target_price": 1500.00
+    }
+]
+
+# Optional: How often to check for prices, in seconds
+CHECK_INTERVAL_SECONDS = 3600  # 1 hour
+# CHECK_INTERVAL_SECONDS = 60 # 1 minute for testing
+
+# Optional: Path to a file to keep track of notified items to avoid re-notifying
+NOTIFIED_ITEMS_FILE = "notified_items.json"

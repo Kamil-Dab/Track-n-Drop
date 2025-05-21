@@ -1,0 +1,5 @@
+requests
+# python-telegram-bot is a more comprehensive library, 
+# but for sending simple messages, requests is sufficient as used in telegram_sender.py.
+# If you plan to expand bot capabilities (e.g., handling commands), consider:
+# python-telegram-bot>=13.0,<20.0 

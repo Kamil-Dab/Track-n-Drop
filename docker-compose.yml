@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  price-tracker:
+    build: .
+    container_name: price-tracker-app
+    restart: unless-stopped
+    volumes:
+      - ./config.py:/app/config.py:ro
+      - notified_data:/app # notified_items.json will be created here by the app
+
+volumes:
+  notified_data: # Defines the named volume for persistent data
